@@ -9,7 +9,7 @@
 
 ## 技术栈
 
-- Hugo（扩展版，0.147.9）+ PaperMod 主题
+- Hugo（扩展版，0.158.0）+ PaperMod 主题
 - GitHub Actions 自动构建并部署到 GitHub Pages
 - 主题不在仓库里存放，构建时由工作流从 `adityatelange/hugo-PaperMod` 拉取
 
