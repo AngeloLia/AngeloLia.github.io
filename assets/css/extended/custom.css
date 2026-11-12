@@ -1,7 +1,11 @@
 /* 旧雨楼 · 大胆文艺
    Warm paper, ink, seal-red accent + a touch of gold.
    Serif for reading, sans only for small meta text.
-   Hairlines instead of shadows, slow fades instead of jumps. */
+   Hairlines instead of shadows, slow fades instead of jumps.
+   Type: 朱雀仿宋 (Zhuque Fangsong, v0.212 technical preview, Regular 400 only).
+   It has no bold weight, so headings rely on size + colour, never on
+   font-weight 600/700 (that would be browser-synthesised faux bold).
+   Fallback: Noto Serif SC / Songti SC covers glyphs the preview lacks. */
 
 /* --- palette & measure --- */
 :root {
@@ -38,9 +42,10 @@
 
 /* --- type --- */
 body {
-  font-family: "Noto Serif SC", "Songti SC", "STSong", Georgia, "Times New Roman", serif;
-  line-height: 1.9;
-  letter-spacing: 0.01em;
+  font-family: "Zhuque Fangsong", "Noto Serif SC", "Songti SC", "STSong", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.02em;
 }
 
 .logo a,
@@ -51,8 +56,17 @@ body {
 .post-content h2,
 .post-content h3,
 .post-content h4 {
-  font-family: "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
-  letter-spacing: 0.04em;
+  font-family: "Zhuque Fangsong", "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* Code stays monospace: never set it in Fangsong */
+.post-content code,
+.post-content pre,
+.post-content pre code {
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+  letter-spacing: 0;
 }
 
 .post-meta,
@@ -76,8 +90,8 @@ body {
 }
 
 .home-info h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.2rem;
+  font-weight: 400;
   line-height: 1.2;
   margin-bottom: 12px;
 }
@@ -121,8 +135,8 @@ body {
 }
 
 .post-entry .entry-header h2 {
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 400;
   transition: color 0.3s ease;
 }
 
@@ -163,14 +177,14 @@ a {
   margin-bottom: 1.4em;
 }
 
-/* First character as a large seal-red drop cap */
+/* First character as a large seal-red drop cap (Fangsong has no bold) */
 .post-content > p:first-of-type::first-letter {
   float: left;
-  font-size: 2.6em;
+  font-size: 2.8em;
   line-height: 1;
   padding: 0.05em 0.12em 0 0;
   color: var(--accent);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .post-content h2 {
@@ -303,7 +317,8 @@ a {
 }
 
 .logo a {
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 1.25rem;
 }
 
 .menu a:hover {
@@ -358,11 +373,11 @@ a {
 /* --- responsive: mobile first, keep it calm --- */
 @media (max-width: 640px) {
   body {
-    line-height: 1.85;
+    line-height: 1.95;
   }
 
   .home-info h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .home-info h1::after {
