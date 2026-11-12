@@ -17,9 +17,16 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 params:
   description: "少年听雨歌楼上"
   author: "Angelo"
+  DateFormat: "2006-01-02"
   ShowReadingTime: true
   ShowShareButtons: false
   ShowPostNavLinks: true
@@ -31,6 +38,15 @@ params:
   ShowToc: true
   TocOpen: false
   comments: false
+  # Client-side search (Fuse.js): search page at /search/
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 1
+    keys: ["title", "permalink", "summary", "content"]
   profileMode:
     enabled: false
   socialIcons: []
@@ -43,6 +59,9 @@ menu:
     - name: "归档"
       url: "/archives/"
       weight: 20
+    - name: "搜索"
+      url: "/search/"
+      weight: 30
     - name: "关于"
       url: "/about/"
-      weight: 30
+      weight: 40
