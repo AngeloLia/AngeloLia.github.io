@@ -49,6 +49,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
   profileMode:
     enabled: false
+  # Homepage hero (Home-Info mode, above the post list)
+  homeInfoParams:
+    Title: "旧雨楼"
+    Content: "少年听雨歌楼上。\n\n这里写杂谈、读书笔记、音谋笔记和游记。雨来了，坐一会儿。"
   socialIcons: []
 
 menu:
