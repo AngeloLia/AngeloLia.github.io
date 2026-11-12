@@ -1,0 +1,23 @@
+{{- /* 旧雨楼 · 简约页脚 + 阅读进度条 */ -}}
+<footer class="footer">
+  <span>旧雨楼 · 少年听雨歌楼上</span>
+  <span> · </span>
+  <span>&copy; {{ now.Year }} Angelo</span>
+  <span> · </span>
+  <span>Hugo + PaperMod</span>
+</footer>
+<div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+<script>
+(function () {
+  var bar = document.getElementById("reading-progress");
+  if (!bar) return;
+  function onScroll() {
+    var el = document.documentElement;
+    var max = el.scrollHeight - el.clientHeight;
+    var p = max > 0 ? (el.scrollTop / max) * 100 : 0;
+    bar.style.width = p + "%";
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
+</script>
