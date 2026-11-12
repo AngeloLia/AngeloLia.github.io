@@ -1,0 +1,41 @@
+baseURL: "https://angelolia.github.io/"
+languageCode: "zh-Hans"
+defaultContentLanguage: "zh-Hans"
+title: "旧雨楼"
+theme: "PaperMod"
+description: "少年听雨歌楼上"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+params:
+  description: "少年听雨歌楼上"
+  author: "Angelo"
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowToc: true
+  TocOpen: false
+  comments: false
+  profileMode:
+    enabled: false
+  socialIcons: []
+
+menu:
+  main:
+    - name: "文章"
+      url: "/posts/"
+      weight: 10
+    - name: "归档"
+      url: "/archives/"
+      weight: 20
+    - name: "关于"
+      url: "/about/"
+      weight: 30
