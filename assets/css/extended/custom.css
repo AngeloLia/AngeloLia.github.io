@@ -1,0 +1,193 @@
+/* 旧雨楼 · 简约文艺
+   Warm paper, ink, one muted accent. Serif for reading, sans only for
+   small meta text. Everything quiet: hairlines instead of shadows,
+   slow fades instead of jumps. */
+
+/* --- palette & measure --- */
+:root {
+  --theme: rgb(250, 248, 242);
+  --entry: rgb(255, 253, 248);
+  --primary: rgb(43, 43, 38);
+  --secondary: rgb(120, 116, 106);
+  --tertiary: rgb(196, 191, 180);
+  --content: rgb(64, 62, 56);
+  --code-block-bg: rgb(244, 241, 234);
+  --code-bg: rgb(240, 237, 228);
+  --border: rgb(226, 221, 210);
+  --accent: rgb(122, 92, 62);
+  --main-width: 720px;
+  --nav-width: 1024px;
+}
+
+[data-theme="dark"] {
+  --theme: rgb(30, 28, 25);
+  --entry: rgb(38, 35, 31);
+  --primary: rgb(232, 226, 214);
+  --secondary: rgb(164, 157, 145);
+  --tertiary: rgb(92, 88, 80);
+  --content: rgb(205, 198, 186);
+  --code-block-bg: rgb(38, 35, 31);
+  --code-bg: rgb(48, 44, 39);
+  --border: rgb(66, 61, 53);
+  --accent: rgb(198, 164, 118);
+}
+
+/* --- type --- */
+body {
+  font-family: "Noto Serif SC", "Songti SC", "STSong", Georgia, "Times New Roman", serif;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
+}
+
+.logo a,
+.post-title,
+.entry-header h2,
+.page-header h1,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  font-family: "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+  letter-spacing: 0.04em;
+}
+
+.post-meta,
+.breadcrumbs,
+.menu,
+.toc,
+.footer,
+.post-tags,
+.pagination,
+.archive-year-header,
+.searchbox input {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* --- quiet entries: hairline, no shadow --- */
+.post-entry {
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  padding: 28px 4px;
+  transition: background-color 0.4s ease;
+}
+
+.post-entry:hover {
+  background: var(--entry);
+}
+
+.post-entry .entry-header h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.post-entry .entry-content {
+  color: var(--secondary);
+}
+
+/* --- links: underline that fades in --- */
+a {
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.post-content a {
+  box-shadow: none;
+  border-bottom: 1px solid var(--tertiary);
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.post-content a:hover {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+/* --- article body --- */
+.post-content {
+  font-size: 1.02rem;
+}
+
+.post-content p {
+  margin-bottom: 1.4em;
+}
+
+.post-content blockquote {
+  border-left: 2px solid var(--accent);
+  color: var(--secondary);
+  font-style: normal;
+  margin: 1.6em 0;
+  padding: 0.2em 0 0.2em 1.2em;
+}
+
+.post-content img {
+  border-radius: 2px;
+  transition: opacity 0.5s ease;
+}
+
+/* --- table of contents: quiet, on the side of the text --- */
+.toc {
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--entry);
+  box-shadow: none;
+}
+
+.toc a {
+  transition: color 0.3s ease;
+}
+
+/* --- header / footer --- */
+.header {
+  border-bottom: 1px solid var(--border);
+}
+
+.footer {
+  color: var(--secondary);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+}
+
+.footer a {
+  color: var(--secondary);
+}
+
+/* --- reading progress (thin line, top) --- */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  z-index: 100;
+  transition: width 0.1s linear;
+}
+
+/* --- page fade-in --- */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.main {
+  animation: fade-in 0.5s ease both;
+}
+
+/* --- back to top: quiet circle --- */
+.top-link {
+  border: 1px solid var(--border);
+  background: var(--entry);
+  box-shadow: none;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.top-link:hover {
+  border-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main { animation: none; }
+  * { transition: none !important; }
+}
