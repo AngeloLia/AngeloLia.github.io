@@ -1,0 +1,19 @@
+{{- /* 旧雨楼 · 同楼旧文：相关文章小组件（无相关时取最近三篇） */ -}}
+{{- $related := .Site.RegularPages.Related . | first 3 -}}
+{{- if not $related }}
+  {{- $related = where .Site.RegularPages "Section" "posts" | first 4 -}}
+  {{- $related = where $related "Permalink" "!=" .Permalink | first 3 -}}
+{{- end }}
+{{- if $related }}
+<aside class="related-posts">
+  <h3>同楼旧文</h3>
+  <ul>
+    {{- range $related }}
+    <li>
+      <time>{{ .Date.Format "2006-01-02" }}</time>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{- end }}
+  </ul>
+</aside>
+{{- end }}
