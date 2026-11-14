@@ -415,3 +415,66 @@ a {
   .main { animation: none; }
   * { transition: none !important; }
 }
+
+/* 关于页 · About Me：按旧站截图居中排版，不加装饰 */
+.about-page {
+  text-align: center;
+  padding: 56px 0 40px;
+}
+
+.about-title {
+  font-family: "Zhuque Fangsong", "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0 0 44px;
+}
+
+.about-body {
+  font-family: "Zhuque Fangsong", "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 2.2;
+  color: var(--primary);
+}
+
+.about-body p {
+  margin: 0;
+}
+
+.about-x {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-top: 48px;
+  background: var(--primary);
+  color: var(--theme);
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: none;
+}
+
+.about-x:hover {
+  background: var(--accent);
+  color: var(--entry);
+}
+
+@media (max-width: 640px) {
+  .about-page {
+    padding: 40px 0 32px;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+  }
+
+  .about-body {
+    font-size: 1.1rem;
+    line-height: 2.1;
+  }
+}
