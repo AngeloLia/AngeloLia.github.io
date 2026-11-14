@@ -480,3 +480,20 @@ a {
   }
 }
 
+
+/* 文章内图片：居中，圆角，留白 */
+.post-content figure {
+  margin: 28px auto;
+  text-align: center;
+}
+
+.post-content figure img {
+  border-radius: var(--radius);
+}
+
+/* 首页列表封面：裁成横幅，不抢文章 */
+.post-entry .entry-cover img {
+  max-height: 360px;
+  object-fit: cover;
+  object-position: center;
+}
