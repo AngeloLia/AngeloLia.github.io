@@ -97,7 +97,8 @@ body {
 }
 
 .home-info h1::after {
-  content: "旧雨楼";
+  content: "少年听雨歌楼上";
+  white-space: nowrap;
   display: inline-block;
   vertical-align: super;
   margin-left: 14px;
@@ -479,100 +480,3 @@ a {
   }
 }
 
-/* 首页：hero 通栏居中；下方文章居中，X 组件在右侧、低调、下沉 */
-.home-hero {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-body:has(.home-layout) .main,
-body:has(.home-layout) .footer {
-  max-width: 1500px;
-}
-
-.home-layout {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 760px) 320px;
-  column-gap: 24px;
-  justify-content: center;
-  align-items: start;
-}
-
-.home-main {
-  grid-column: 2;
-  min-width: 0;
-}
-
-.home-sidebar {
-  grid-column: 3;
-  margin-top: 24px;
-  position: sticky;
-  top: 24px;
-}
-
-/* X 组件：去掉白卡片，只留细字和小标题，不抢眼 */
-.x-widget {
-  background: transparent;
-  border: none;
-  padding: 0;
-}
-
-.x-widget-title {
-  margin: 0 0 12px;
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: var(--secondary);
-}
-
-.x-widget-title a {
-  box-shadow: none;
-  color: var(--secondary);
-}
-
-.x-widget-x {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  margin-right: 6px;
-  vertical-align: -3px;
-  background: var(--primary);
-  color: var(--theme);
-  border-radius: 3px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.65rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-@media (max-width: 1499px) {
-  body:has(.home-layout) .main,
-  body:has(.home-layout) .footer {
-    max-width: 1180px;
-  }
-
-  .home-layout {
-    grid-template-columns: minmax(0, 1fr) 320px;
-    gap: 40px;
-  }
-
-  .home-main {
-    grid-column: 1;
-  }
-
-  .home-sidebar {
-    grid-column: 2;
-  }
-}
-
-@media (max-width: 1023px) {
-  .home-layout {
-    display: block;
-  }
-
-  .home-sidebar {
-    position: static;
-    margin: 40px 0 0;
-  }
-}
