@@ -488,6 +488,8 @@ a {
 }
 
 .post-content figure img {
+  display: block;
+  margin: 0 auto;
   border-radius: var(--radius);
 }
 
