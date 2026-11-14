@@ -1,9 +1,22 @@
 # WordPress 迁移对照表
 
 - 来源：`WordPress.2025-05-12.xml`（WordPress 6.8.1 导出，2025-05-12，旧站 https://exayktwt.us-east-1.clawcloudrun.com）
+- 第二次来源：`WordPress.2026-11-14.xml`（WordPress 6.8 导出，2026-11-14，本地站 http://192.168.3.215/wordpress）
 - 导出文件共 51 个条目；已发布文章 6 篇，全部导入；其余条目均未导入（见下表）。
-- 迁移日期：2026-11-12
-- 转换方式：Gutenberg HTML（`<p>`、`<figure><img>`、`<blockquote>`、链接）转为干净 Markdown，正文内容未改写。
+- 迁移日期：2026-11-12；第二次导入：2026-11-14（新增 3 篇，见下）
+- 转换方式：Gutenberg HTML（`<p>`、`<figure><img>`、`<blockquote>`、链接、列表）转为干净 Markdown，正文内容未改写。
+
+## 第二次导入（2026-11-14）
+
+新导出文件共 41 个条目，已发布文章 10 篇：原 6 篇正文与旧导出完全一致（音乐设备记录、白佛山记游仅图片地址由旧站域名改为本地站 `192.168.3.215`，已上线文件保留旧站域名，未改动），新增 4 篇，其中 3 篇已导入：
+
+| WordPress 标题 | WordPress 日期 | WordPress 状态 | Hugo 文件 | 图片 |
+| --- | --- | --- | --- | --- |
+| 大压抑时代 | 2026-02-07 | 已发布，分类：扯淡、杂谈 | `content/posts/2026-02-07-da-ya-yi-shi-dai.md` | 无图片 |
+| 关于我执-来源Gemini | 2026-02-07 | 已发布，分类：读书笔记 | `content/posts/2026-02-07-guan-yu-wo-zhi-lai-yuan-gemini.md` | 无图片 |
+| 观水有术，月到天心 | 2026-03-08 | 已发布，分类：读书笔记 | `content/posts/2026-03-08-guan-shui-you-shu-yue-dao-tian-xin.md` | 无图片 |
+
+未导入：私密文章《写点什么》仍为私密，跳过；《近期所得》（2026-02-07，已发布，分类：未分类、杂谈）在导出文件中**正文为空**（`content:encoded`、摘要均为空），未导入，等 Angelo 确认是只留标题还是补正文后再处理。
 
 ## 已导入的文章
 
