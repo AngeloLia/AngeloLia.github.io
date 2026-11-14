@@ -52,8 +52,10 @@ params:
   # Homepage hero (Home-Info mode, above the post list)
   homeInfoParams:
     Title: "旧雨楼"
-    Content: "少年听雨歌楼上。"
-  socialIcons: []
+    Content: "我是 Leon，最近在尝试写字。表达是思考的一部分，语言太过虚荣，只有文字直面内心。"
+  socialIcons:
+    - name: "x"
+      url: "https://x.com/ooldrain"
 
 menu:
   main:
