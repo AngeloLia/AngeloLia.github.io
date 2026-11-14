@@ -4,6 +4,10 @@ date: 2026-03-08T23:41:28+08:00
 draft: false
 categories: ["读书笔记"]
 aliases: ["/2026/03/08/观水有术，月到天心/"]
+cover:
+  image: /images/yue-dao-tian-xin.jpg
+  alt: "月到天心 书法横幅"
+  hiddenInSingle: true
 ---
 
 这两句放在书房，其实很有意思。它们来自两条完全不同的思想河流，却在同一处汇合。
