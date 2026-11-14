@@ -5,15 +5,18 @@ draft: false
 categories: ["音谋笔记"]
 tags: ["音谋笔记"]
 aliases: ["/2025/05/08/音乐设备记录/"]
+cover:
+  image: /images/music-desktop.jpg
+  alt: "桌面听音设备"
 ---
 
 从上学时期就非常热衷各种听音设备，从收音机、随身听到MP3播放器，对器材的热爱甚至大过音乐本身。最近想要折腾胆机，所以想起来一起总结下，陆续会补充上照片，大部分设备其实都有保留，像搭载机械微硬盘的播放器ZEN MIRCO，状态依旧生猛。
 
-![](https://exayktwt.us-east-1.clawcloudrun.com/wp-content/uploads/2025/05/img_0179-1-1-1024x982.jpg)
+{{< figure src="/images/music-zen-micro.jpg" alt="Creative ZEN Micro 随身听" width="560" >}}
 
 因喜爱的音乐风格偏好是流行人声及小编制器乐，偏重中上盘，陆续入手K701及天龙P372（2025年在京东竟然还有全新库存，又买了一只），陪我度过了大学三年茫然无措的时光。
 
-![](https://exayktwt.us-east-1.clawcloudrun.com/wp-content/uploads/2025/05/img_0203-1-1024x768.jpg)
+{{< figure src="/images/music-desktop.jpg" alt="桌面听音设备" >}}
 
 桌面设备用的是一对监听音箱普瑞纳斯E5及拓品DX3pro,细节还原相当不错，音乐感稍有不足。最近闲下来，想去折腾一下胆机功放，目标是尊宝S803和国产的小胆机（受和菜头最近文章启发）。
 
